@@ -1,195 +1,103 @@
-Dynamic Retail Dashboard in Excel
-📌 Overview
+#  Dynamic Retail Dashboard in Excel  
+
+##  Overview  
+The **Dynamic Retail Dashboard** is an interactive and data-driven tool built in Excel to visualize and analyze retail data.  
+- Connects to datasets hosted on **GitHub**  
+- Uses **Power Query** for data transformation  
+- Provides insights via **dynamic charts and KPIs**  
+- Solves key business questions, enabling **data-driven decision-making**  
 
-The Dynamic Retail Dashboard is an interactive and data-driven tool built in Excel to visualize and analyze retail data. It connects to datasets hosted on GitHub, uses Power Query for data transformation, and presents insights through dynamic charts and KPIs. The dashboard solves key business questions, enabling informed decision-making.
+---
 
-📂 Datasets Used
-1. Orders Table
+##  Datasets Used  
 
-Contains details of customer orders, including product, shipping, and financial metrics.
+| **Table**      | **Description**                                                                 | **Sample Fields**                                                                                 |  
+|-----------------|---------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|  
+| **Orders**     | Contains customer order details including product, shipping, and financial data. | Order ID, Returned, Order Date, Ship Date, Ship Mode, Customer Name, Segment, Country, Market, Sales, Profit, Discount |  
+| **Returns**    | Tracks orders that have been returned and their associated markets.              | Returned, Order ID, Market                                                                         |  
+| **People**     | Information about sales representatives and their regions.                      | Person, Region                                                                                    |  
 
-Sample Data
+### 📝 Sample Data  
 
-Order ID	Returned	Order Date	Ship Date	Ship Mode	Customer Name	Segment	Country	Market	Sales	Profit	Discount
-CA-2012-124891	No	31-07-2020	31-07-2020	Same Day	Rick Hansen	Consumer	United States	US	2309.65	762.18	0
-IN-2013-77878	Yes	05-02-2021	07-02-2021	Second Class	Justin Ritter	Corporate	Australia	APAC	3709.40	-288.77	0.1
-IN-2013-71249	No	17-10-2021	18-10-2021	First Class	Craig Reiter	Consumer	Australia	APAC	5175.17	919.97	0.1
-2. Returns Table
+**Orders Table**  
 
-Tracks orders that have been returned, along with the associated markets.
+| Order ID       | Returned | Order Date  | Ship Date   | Ship Mode    | Customer Name | Segment   | Country       | Market | Sales   | Profit  | Discount |  
+|----------------|----------|-------------|-------------|--------------|---------------|-----------|---------------|--------|---------|---------|----------|  
+| CA-2012-124891 | No       | 31-07-2020  | 31-07-2020  | Same Day     | Rick Hansen   | Consumer  | United States | US     | 2309.65 | 762.18  | 0        |  
+| IN-2013-77878  | Yes      | 05-02-2021  | 07-02-2021  | Second Class | Justin Ritter | Corporate | Australia     | APAC   | 3709.40 | -288.77 | 0.1      |  
+| IN-2013-71249  | No       | 17-10-2021  | 18-10-2021  | First Class  | Craig Reiter  | Consumer  | Australia     | APAC   | 5175.17 | 919.97  | 0.1      |  
 
-Sample Data
+**Returns Table**  
 
-Returned	Order ID	Market
-Yes	MX-2013-168137	LATAM
-No	US-2011-165316	LATAM
-Yes	ES-2013-152578	EU
-Yes	CA-2013-118311	United States
-3. People Table
+| Returned | Order ID       | Market       |  
+|----------|----------------|--------------|  
+| Yes      | MX-2013-168137 | LATAM        |  
+| No       | US-2011-165316 | LATAM        |  
+| Yes      | ES-2013-152578 | EU           |  
+| Yes      | CA-2013-118311 | United States|  
 
-Contains details about sales representatives and their respective regions.
+**People Table**  
 
-Sample Data
+| Person            | Region   |  
+|-------------------|----------|  
+| Anna Andreadi     | Central  |  
+| Chuck Magee       | South    |  
+| Kelly Williams    | East     |  
+| Matt Collister    | West     |  
+| Deborah Brumfield | Africa   |  
 
-Person	Region
-Anna Andreadi	Central
-Chuck Magee	South
-Kelly Williams	East
-Matt Collister	West
-Deborah Brumfield	Africa
-🚀 Problem Statements & Solutions
-1. Key Performance Indicators (KPIs)
+---
 
-Objective: Calculate and display Total Sales, Total Profit, Total Quantity, Number of Orders, and Profit Margin dynamically.
+##  Problem Statements & Solutions  
 
-Steps:
+| **#** | **Analysis**              | **Objective**                                                                 | **Steps**                                                                 | **Visualization**   |  
+|-------|----------------------------|-------------------------------------------------------------------------------|----------------------------------------------------------------------------|---------------------|  
+| 1     | **KPIs**                  | Calculate Total Sales, Profit, Orders, Quantity & Profit Margin dynamically.   | Import Orders → Create calculated fields → Use Excel formulas → Build KPI table. | KPI Table           |  
+| 2     | **Sales & Profit Trends** | Visualize sales & profit trends over time.                                    | Pivot Table (Order Date) → Add Sales & Profit → Line Chart → Apply Slicers. | Line Chart + Slicers|  
+| 3     | **Category-Wise Profit**  | Analyze profitability across product categories.                              | Pivot Table (Category vs Profit) → Sort Descending → Add Bar Chart.        | Bar Chart           |  
+| 4     | **Segment Sales Share**   | Show contribution of each customer segment.                                   | Pivot Table (Segment vs Sales) → % Share Calculation → Pie/Donut Chart.    | Donut Chart         |  
+| 5     | **Sales by Country**      | Compare sales performance across countries.                                   | Pivot Table (Country vs Sales) → Heatmap / Map Chart.                      | Heatmap / Map       |  
+| 6     | **Top 5 Subcategories**   | Identify top-performing product subcategories.                                | Pivot Table (Sub-Category vs Sales) → Sort → Filter Top 5 → Column Chart.  | Column Chart        |  
+| 7     | **Bottom 5 Subcategories**| Highlight underperforming product subcategories.                              | Pivot Table (Sub-Category vs Sales) → Sort Ascending → Filter Bottom 5.    | Column Chart        |  
+| 8     | **Yearly Sales Trends**   | Track sales performance across multiple years.                                | Pivot Table (Yearly Sales) → Line Chart → Slicers for Region/Segment.      | Line Chart          |  
 
-Import Orders Table into Excel using Power Query.
+---
 
-Create calculated columns:
+##  Dynamic Features  
 
-Profit Margin = Profit / Sales
+| **Feature**              | **Description**                                                                 |  
+|---------------------------|---------------------------------------------------------------------------------|  
+| **Dynamic Charts**        | Updates instantly when slicers/filters are applied.                             |  
+| **Power Query Integration** | Automates data cleaning and transformation from raw datasets.                 |  
+| **KPI Table**             | Displays critical metrics with icons (💰 for Sales, 📦 for Orders, etc.).        |  
+| **Slicers**               | Enables interactive filtering by Category, Market, Country, and Year.           |  
 
-Total Orders = COUNT(Order ID)
+---
 
-Use Excel formulas:
+##  Next Steps for Extension  
 
-Total Sales = SUM(Sales)
+| **Enhancement**        | **Description**                                           |  
+|-------------------------|-----------------------------------------------------------|  
+| **Return Analysis**    | Investigate return rates by market or category.            |  
+| **Customer Insights**  | Identify top & bottom customers based on profitability.    |  
+| **Market Analysis**    | Compare performance across different global regions.       |  
+| **Product Analysis**   | Evaluate contribution of individual products.              |  
 
-Total Profit = SUM(Profit)
+---
 
-Total Quantity = SUM(Quantity)
+##  Significance  
+This dashboard enables retail businesses to:  
+✔ Track performance using **KPIs**  
+✔ Analyze **category, segment, and geographic** trends  
+✔ Make **data-driven decisions** to optimize operations  
 
-Build a dynamic KPI table with symbols (💰 for Total Sales).
+---
 
-2. Sales and Profit Analysis
+##  Visuals  
+The repository includes:  
+- Snapshots of the **final dashboard**  
+- Visual examples for **each analysis**  
 
-Objective: Visualize sales and profit trends over time.
+---
 
-Steps:
 
-Create Pivot Table with Order Date grouped by Year/Month.
-
-Add Sales and Profit as values.
-
-Create Line Chart for trends.
-
-Apply slicers for Category, Market, or Region.
-
-3. Category-Wise Profit
-
-Objective: Analyze profitability across product categories.
-
-Steps:
-
-Pivot Table: Category as rows, Profit as values.
-
-Sort in descending order of Profit.
-
-Use Bar Chart for visualization.
-
-Add slicers for interactivity.
-
-4. Segment-Wise Sales Share (%)
-
-Objective: Show sales proportion for each customer segment.
-
-Steps:
-
-Pivot Table: Segment as rows, Sales as values.
-
-Calculate % Share = Sales / Total Sales * 100.
-
-Use Pie/Donut Chart with labels.
-
-5. Sales by Country
-
-Objective: Analyze sales performance across countries.
-
-Steps:
-
-Pivot Table: Country as rows, Sales as values.
-
-Sort by Sales.
-
-Apply Conditional Formatting or Heatmap.
-
-Optionally, use a Geographic Map Chart.
-
-6. Top 5 Subcategories
-
-Objective: Identify top-performing subcategories.
-
-Steps:
-
-Pivot Table: Sub-Category as rows, Sales as values.
-
-Sort descending.
-
-Filter Top 5.
-
-Column Chart visualization.
-
-7. Bottom 5 Subcategories
-
-Objective: Highlight underperforming subcategories.
-
-Steps:
-
-Pivot Table: Sub-Category as rows, Sales as values.
-
-Sort ascending.
-
-Filter Bottom 5.
-
-Column Chart visualization.
-
-8. Yearly Sales Trends
-
-Objective: Track sales growth across years.
-
-Steps:
-
-Pivot Table: Order Date grouped by Year.
-
-Add Sales as values.
-
-Line Chart visualization.
-
-Add slicers (Category, Region, Segment).
-
-⚡ Dynamic Features
-
-Dynamic Charts → Real-time updates with slicers.
-
-Power Query Integration → Automates data cleaning & transformation.
-
-KPI Table → Highlights critical metrics at a glance.
-
-🔮 Next Steps for Extension
-
-Return Analysis → Investigate return rates by market or category.
-
-Customer Insights → Identify top and bottom customers.
-
-Market Analysis → Compare performance across global regions.
-
-Product Analysis → Deep-dive into product contributions.
-
-🎯 Significance
-
-This dashboard helps retail businesses:
-
-Track performance using KPIs.
-
-Understand category, segment, and geography-based trends.
-
-Make data-driven decisions to improve operations.
-
-🖼 Visuals
-
-This repository includes:
-
-Snapshots of final dashboard.
-
-Visual examples for each problem statement.
