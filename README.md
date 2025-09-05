@@ -65,6 +65,8 @@ Contains details about sales representatives and their respective regions.
   - Total Quantity = =SUM(Quantity).  
 - Build a dynamic KPI table and use symbols to enhance visual appeal (e.g., 💰 for Total Sales).  
 
+<img width="802" height="84" alt="image" src="https://github.com/user-attachments/assets/a9fbad21-b373-42b6-97af-017a0f25d1d4" />
+
 ---
 
 ### 2. Sales and Profit Analysis  
@@ -75,6 +77,8 @@ Contains details about sales representatives and their respective regions.
 - Add Sales and Profit as values.  
 - Create a Line Chart to display trends for Sales and Profit.  
 - Apply slicers to filter by category, market, or region dynamically.  
+
+<img width="445" height="369" alt="image" src="https://github.com/user-attachments/assets/de0a82f9-bd71-485f-8d1e-a2c90cfe26f0" />
 
 ---
 
@@ -87,6 +91,8 @@ Contains details about sales representatives and their respective regions.
 3. Create a **Bar Chart** to visualize category-wise profit.  
 4. Add slicers for interactivity (e.g., by region or year).  
 
+<img width="386" height="380" alt="image" src="https://github.com/user-attachments/assets/85b7e095-dc3e-4222-8bcd-b0393c22ffe1" />
+
 ---
 
 ### 4. Segment-wise Sales Share (%)  
@@ -97,6 +103,8 @@ Contains details about sales representatives and their respective regions.
 2. Calculate percentage share using `sales / Total Sales * 100`.  
 3. Create a **Pie Chart** or **Donut Chart** to display the sales share.  
 4. Add labels to show percentage values dynamically.  
+
+<img width="377" height="383" alt="image" src="https://github.com/user-attachments/assets/2576a90d-e756-4cca-bce9-fad3913ea63c" />
 
 ---
 
@@ -109,6 +117,8 @@ Contains details about sales representatives and their respective regions.
 3. Use conditional formatting or a **Heatmap** to highlight top-performing countries.  
 4. Alternatively, use a **Geographic Map Chart** to visualize sales geographically.  
 
+<img width="576" height="341" alt="image" src="https://github.com/user-attachments/assets/88bf48de-6f4a-4465-bc3c-5065eb8cd098" />
+
 ---
 
 ### 6. Top 5 Subcategories  
@@ -119,6 +129,8 @@ Contains details about sales representatives and their respective regions.
 2. Sort the table in descending order of Sales.  
 3. Filter to display the top 5 Sub-Categories.  
 4. Use a **Column Chart** to visualize results.  
+
+<img width="441" height="374" alt="image" src="https://github.com/user-attachments/assets/03f1d2c1-b698-40da-9b28-20461afe6f31" />
 
 ---
 
@@ -131,6 +143,8 @@ Contains details about sales representatives and their respective regions.
 3. Filter to display the bottom 5 Sub-Categories.  
 4. Use a **Column Chart** to visualize results.  
 
+<img width="448" height="367" alt="image" src="https://github.com/user-attachments/assets/13dbe9ca-9f2f-4770-a446-d28467bcf743" />
+
 ---
 
 ### 8. Yearly Sales Trends  
@@ -141,6 +155,8 @@ Contains details about sales representatives and their respective regions.
 - Add Sales as values.  
 - Create a Line Chart to show the trend.  
 - Use slicers to filter by category, region, or segment.  
+
+<img width="800" height="151" alt="image" src="https://github.com/user-attachments/assets/cf9120d1-b4a4-41f5-993d-83786076f38e" />
 
 ---
 
@@ -171,3 +187,4 @@ This dashboard empowers retail businesses to:
 This repository includes:  
 - Visual examples for each solved problem statement.  
 - Snapshots of the final dashboard with all components.  
+<img width="1367" height="739" alt="image" src="https://github.com/user-attachments/assets/16e16694-0641-4e8f-b4ed-2d28ccd22554" />
